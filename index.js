@@ -1,12 +1,15 @@
-import axios from "axios";
 import express, { json } from "express";
-import cheerio from "cheerio";
 import { reviewRoute, searchRoute } from "./routes/index.js";
-const PORT = 5000;
+import cors from "cors";
+import * as dotenv from "dotenv";
+dotenv.config();
+
+const PORT = process.env.PORT || 5001;
 
 const app = express();
 
 //Middlewares
+app.use( cors() );
 app.use( json() );
 // apiCall( url );
 app.use( "/search", searchRoute );
