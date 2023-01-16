@@ -13,7 +13,7 @@ export const searchProduct = async ( req, res, next ) => {
                 .find( ".s-asin" )
                 .each( ( i, el ) => {
                     const productTitle = $( el )
-                        .find( ".a-size-medium.a-text-normal" )
+                        .find( ".a-color-base.a-text-normal" )
                         .text();
                     const productId = $( el ).attr( "data-asin" );
                     const productImg = $( ".s-image", el ).attr( "src" );
