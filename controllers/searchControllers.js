@@ -24,8 +24,7 @@ export const searchProduct = async ( req, res, next ) => {
                     } );
                 } );
         } );
-        // res.send( { data: result } );
-        res.send( { data: result } );
+        res.send( result );
     } catch ( error ) {
         res.send( error );
     }
